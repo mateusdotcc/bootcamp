@@ -1,0 +1,24 @@
+{
+  "name": "next-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "next": "^9.4.4",
+    "next-routes": "^1.4.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "styled-components": "^5.1.1"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production dev",
+    "build": "next build"
+  },
+  "devDependencies": {
+    "babel-plugin-root-import": "^6.5.0",
+    "babel-plugin-styled-components": "^1.10.7"
+  }
+}
