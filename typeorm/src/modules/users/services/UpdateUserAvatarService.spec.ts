@@ -2,7 +2,7 @@ import AppError from '@shared/errors/AppError';
 
 import FakeStorageProvider from '@shared/container/providers/StorageProvider/fakes/FakeStorageProvider';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
-import FakeUsersRepository from '../repositories/fakes/FakesUsersRepository';
+import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 
 describe('UpdateUserAvatar', () => {
   it('should be able to authenticate', async () => {
@@ -43,7 +43,7 @@ describe('UpdateUserAvatar', () => {
       password: '123456',
     });
 
-    expect(
+    await expect(
       updateUserAvatar.execute({
         user_id: 'non-existing-user',
         avatarFilename: 'avatar.jpg',
